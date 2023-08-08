@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Producto1",
+    "description": "producto",
+    "code": "01010101",
+    "price": "122",
+    "status": "true",
+    "productStock": "10",
+    "productCategory": "snack",
+    "thumbnail": "sin imagen",
+    "id": "1691500498882"
+  },
+  {
+    "title": "Producto1",
+    "description": "producto",
+    "code": "01010101",
+    "price": "122",
+    "status": "true",
+    "productStock": "10",
+    "productCategory": "snack",
+    "thumbnail": "sin imagen",
+    "id": "1691500503431"
+  },
+  {
+    "title": "Producto1",
+    "description": "producto",
+    "code": "01010101",
+    "price": "122",
+    "status": "true",
+    "productStock": "10",
+    "productCategory": "snack",
+    "thumbnail": "sin imagen",
+    "id": "1691500505754"
+  }
+]

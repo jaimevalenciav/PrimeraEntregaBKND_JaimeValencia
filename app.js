@@ -14,6 +14,9 @@ app.use('/', cartsRouter);
 app.get('/',(req, res) => {
     res.sendFile(path.join(__dirname, './src/public', 'index.html'));
 })
+app.get('/cart',(req, res) => {
+    res.sendFile(path.join(__dirname, './src/public', 'index2.html'));
+})
 
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
