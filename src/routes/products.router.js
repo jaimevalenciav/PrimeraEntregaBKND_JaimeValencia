@@ -33,7 +33,7 @@ router.get('/api/products/:id', (req, res) => {
 router.post('/api/products', (req, res) => {
     const newProduct = req.body;
     newProduct.id = generateUniqueId();
-
+   
     try {
         const data = fs.readFileSync(FILE_PATH, 'utf8');
         const products = JSON.parse(data);
@@ -56,7 +56,7 @@ router.put('/api/products/:id', (req, res) => {
     try {
         const data = fs.readFileSync(FILE_PATH, 'utf8');
         const products = JSON.parse(data);
-        const productIndex = products.findIndex(product => product.id === pid);
+        const productIndex = products.findIndex(product => product.id == pid);
 
         if (productIndex === -1) {
             return res.status(404).json({ error: 'Producto no encontrado' });
