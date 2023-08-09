@@ -31,7 +31,6 @@ router.post('/api/carts/:id', (req, res) => {
     try {
         const productId = req.params.id;
         
-        // Leer el archivo products.json para obtener el producto
         const productData = fs.readFileSync(FILE_PATH_Products, 'utf8');
         const products = JSON.parse(productData);
         
@@ -41,21 +40,17 @@ router.post('/api/carts/:id', (req, res) => {
             return res.status(404).json({ error: 'Producto no encontrado' });
         }
 
-        // Crear un carrito con un ID automático y agregar el producto
         const cartId = generateUniqueId();
         const newCart = {
             id: cartId,
             products: [product.id]
         };
 
-        // Leer el archivo cart.json para obtener los carritos existentes
         const cartData = fs.readFileSync(FILE_PATH, 'utf8');
         const carts = JSON.parse(cartData);
 
-        // Agregar el nuevo carrito a la lista de carritos
         carts.push(newCart);
 
-        // Guardar la lista actualizada de carritos en el archivo cart.json
         fs.writeFileSync(FILE_PATH, JSON.stringify(carts, null, 2), 'utf8');
 
         res.json({ message: 'Carrito creado y producto agregado satisfactoriamente.' });
@@ -97,14 +92,10 @@ router.post('/api/carts/:cid/product/:pid', (req, res) => {
         const existingProduct = cart.products.find(item => item.id === id);
 
         if (existingProduct) {
-            // Si el producto ya existe, sumar la cantidad
             existingProduct.qty += qty;
         } else {
-            // Si el producto no existe en el carrito, agregarlo
             cart.products.push({ id: id, qty: qty });
         }
-
-        // Escribir los cambios de nuevo en el archivo
         fs.writeFileSync(FILE_PATH, JSON.stringify(carts, null, 2), 'utf8');
 
         res.json({ message: 'Producto agregado al carrito satisfactoriamente.' });

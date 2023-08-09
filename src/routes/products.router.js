@@ -96,7 +96,7 @@ router.delete('/api/products/:id', (req, res) => {
     }
 });
 
-// Generar ID único usando el tiempo actual
+
 function generateUniqueId() {
     return Date.now().toString();
 }
