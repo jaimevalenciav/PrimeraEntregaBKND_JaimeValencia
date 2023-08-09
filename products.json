@@ -5,19 +5,18 @@
     "code": "01010101",
     "price": "122",
     "status": "true",
-    "productStock": "10",
-    "productCategory": "snack",
+    "stock": "10",
+    "category": "snack",
     "thumbnail": "sin imagen",
     "id": "1691500498882"
   },
   {
     "title": "Producto1",
-    "description": "producto",
+    "description": "Producto 13",
     "code": "01010101",
     "price": 105,
     "status": "true",
-    "productStock": "10",
-    "productCategory": "snack",
+    "category": "snack",
     "thumbnail": "sin imagen",
     "id": "1691500503431",
     "stock": 22
@@ -28,8 +27,8 @@
     "code": "01010101",
     "price": "122",
     "status": "true",
-    "productStock": "10",
-    "productCategory": "snack",
+    "stock": "10",
+    "category": "snack",
     "thumbnail": "sin imagen",
     "id": "1691500505754"
   }
